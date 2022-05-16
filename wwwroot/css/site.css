@@ -112,7 +112,7 @@ body {
 .text {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 43%;
   transform: translate(-50%, -50%);
   bottom: 0;
   height: 0;
@@ -166,7 +166,6 @@ body {
   right: 50px;
   width: 90%;
   text-shadow: 4px 4px 2px black;
-  /* left: 50px; */
   font-weight: lighter;
   color: white;
   text-align: center;
@@ -213,7 +212,6 @@ body {
   height: 0;
   right: 50px;
   width: 90%;
-  /* left: 50px; */
   font-weight: normal;
   color: white;
   text-align: center;
@@ -417,6 +415,20 @@ h2 {
   color: white;
   border: none;
   box-shadow: 0 0 20px rgba(172, 151, 135, 1);
+}
+
+/* Menu Page Section */
+
+.table {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: white;
+}
+
+.Edit {
+  color: black !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 20px !important;
 }
 
 /* Coffee Page Section */
