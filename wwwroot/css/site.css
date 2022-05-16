@@ -37,9 +37,7 @@ body {
   top: 0px;
   right: 0px;
   width: 100vw;
-
   z-index: -1;
-
 }
 
 .netborderbox-container {
@@ -69,7 +67,7 @@ body {
   margin-top: 4%;
   margin-left: 10%;
   width: 400px;
-  height: 250px;
+  height: 275px;
 }
 
 .h1-index-display {
@@ -114,13 +112,12 @@ body {
 .text {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   bottom: 0;
   height: 0;
   right: 50px;
   width: 90%;
-  /* left: 50px; */
   font-weight: lighter;
   color: white;
   text-align: center;
@@ -128,7 +125,6 @@ body {
   font-family: algerian;
   /* setting opacity to 60% to blend with bg img */
   background-color: rgba(0, 0, 0, .6);
-  background-image: url("/dist/img/bones.jpeg");
   /* Can only have 1 BG color/image so using blend to combine the 2 */
   background-blend-mode: multiply;
   background-size: cover;
@@ -178,7 +174,6 @@ body {
   font-size: large;
   /* setting opacity to 60% to blend with bg img */
   background-color: rgba(0, 0, 0, .6);
-  background-image: url("/dist/img/a-g-bell.jpg");
   /* Can only have 1 BG color/image so using blend to combine the 2 */
   background-blend-mode: multiply;
   background-size: contain;
@@ -225,7 +220,6 @@ body {
   font-size: large;
   /* setting opacity to 60% to blend with bg img */
   background-color: rgba(0, 0, 0, .6);
-  background-image: url("/dist/img/Free_willy.jpg");
   /* Can only have 1 BG color/image so using blend to combine the 2 */
   background-blend-mode: multiply;
   background-size: cover;
@@ -333,6 +327,8 @@ h1 {
   background: #3b5998
 }
 
+/* About Us Section */
+
 #overlay {
   position: absolute;
 
@@ -342,4 +338,113 @@ h1 {
   top: 0;
   bottom: 0;
 
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 30px 210px;
+  margin-bottom: 100px;
+
+}
+
+#pic {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading1 {
+  color: white;
+  font-family: century;
+  font-size: 3rem;
+  text-align: center;
+  padding: 0px;
+}
+
+#pic img {
+  width: 575px;
+  height: 400px;
+}
+
+#intro {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 45px;
+  background-color: rgb(76, 68, 59, 0.5);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  color: white;
+}
+
+h2 {
+  font-family: century;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 20px;
+  align-items: center;
+  text-align: justify;
+  padding: 20px;
+  border: rgb(156, 135, 119) 1px solid;
+  border-radius: 15px;
+  background: linear-gradient(to top, rgb(76, 68, 59, 0.5) 50%, white 50%);
+  background-size: 100% 200%;
+  transition: all 0.8s;
+}
+
+.box:hover {
+  background-position: bottom;
+  color: white;
+  border: none;
+  box-shadow: 0 0 20px rgba(172, 151, 135, 1);
+}
+
+/* Coffee Page Section */
+
+.table {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(165, 160, 154, 0.5) !important;
+}
+
+.EditCoffe {
+  color: white !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 20px !important;
+
+}
+
+.coffeBean {
+  width: 150px !important;
+}
+
+/* Contact Page */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 20px 0px;
 }
