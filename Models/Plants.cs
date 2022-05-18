@@ -2,9 +2,9 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace W21_Assignment.Models;
 
-public class Coffee
+public class Plant
 {
-    public int CoffeeId { get; set; }
+    public int PlantId { get; set; }
     public string? Name { get; set; }
 
     public string? Picture { get; set; }

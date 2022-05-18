@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using W21_Assignment.Models;
 
-namespace W21_Assignment.Pages.Menu
+namespace W21_Assignment.Pages.Plants
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace W21_Assignment.Pages.Menu
         }
 
         [BindProperty]
-        public W21_Assignment.Models.Menu Menu { get; set; }
+        public W21_Assignment.Models.Plant Plant { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace W21_Assignment.Pages.Menu
                 return NotFound();
             }
 
-            Menu = await _context.Menu.FirstOrDefaultAsync(m => m.MenuId == id);
+            Plant = await _context.Plants.FirstOrDefaultAsync(m => m.PlantId == id);
 
-            if (Menu == null)
+            if (Plant == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace W21_Assignment.Pages.Menu
                 return Page();
             }
 
-            _context.Attach(Menu).State = EntityState.Modified;
+            _context.Attach(Plant).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace W21_Assignment.Pages.Menu
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!MenuExists(Menu.MenuId))
+                if (!PlantExists(Plant.PlantId))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace W21_Assignment.Pages.Menu
             return RedirectToPage("./Index");
         }
 
-        private bool MenuExists(int id)
+        private bool PlantExists(int id)
         {
-            return _context.Menu.Any(e => e.MenuId == id);
+            return _context.Plants.Any(e => e.PlantId == id);
         }
     }
 }

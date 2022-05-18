@@ -14,9 +14,9 @@ public class DBContext : IdentityDbContext
     {
     }
 
-    public DbSet<W21_Assignment.Models.Menu> Menu { get; set; }
+    public DbSet<W21_Assignment.Models.Product> Products { get; set; }
 
-    public DbSet<W21_Assignment.Models.Coffee> Coffee { get; set; }
+    public DbSet<W21_Assignment.Models.Plant> Plants { get; set; }
 
     public DbSet<W21_Assignment.Models.SiteUser> SiteUser { get; set; }
 }

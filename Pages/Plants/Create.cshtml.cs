@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using W21_Assignment.Models;
 
-namespace W21_Assignment.Pages.Coffee
+namespace W21_Assignment.Pages.Plants
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace W21_Assignment.Pages.Coffee
         }
 
         [BindProperty]
-        public W21_Assignment.Models.Coffee Coffee { get; set; }
+        public W21_Assignment.Models.Plant Plant { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -35,7 +35,7 @@ namespace W21_Assignment.Pages.Coffee
                 return Page();
             }
 
-            _context.Coffee.Add(Coffee);
+            _context.Plants.Add(Plant);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

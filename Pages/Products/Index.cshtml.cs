@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using W21_Assignment.Models;
 
-namespace W21_Assignment.Pages.Menu
+namespace W21_Assignment.Pages.Products
 {
     public class IndexModel : PageModel
     {
@@ -20,11 +20,11 @@ namespace W21_Assignment.Pages.Menu
             _context = context;
         }
 
-        public IList<W21_Assignment.Models.Menu> Menu { get; set; }
+        public IList<W21_Assignment.Models.Product> Products { get; set; }
         public string? UserEmail { get; set; }
         public async Task OnGetAsync()
         {
-            Menu = await _context.Menu.ToListAsync();
+            Products = await _context.Products.ToListAsync();
             if (User.Identity != null)
             {
                 var claimsIdentity = (ClaimsIdentity)User.Identity;

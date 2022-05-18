@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using W21_Assignment.Models;
 
-namespace W21_Assignment.Pages.Coffee
+namespace W21_Assignment.Pages.Products
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace W21_Assignment.Pages.Coffee
         }
 
         [BindProperty]
-        public W21_Assignment.Models.Coffee Coffee { get; set; }
+        public W21_Assignment.Models.Product Products { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace W21_Assignment.Pages.Coffee
                 return NotFound();
             }
 
-            Coffee = await _context.Coffee.FirstOrDefaultAsync(m => m.CoffeeId == id);
+            Products = await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
 
-            if (Coffee == null)
+            if (Products == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace W21_Assignment.Pages.Coffee
                 return Page();
             }
 
-            _context.Attach(Coffee).State = EntityState.Modified;
+            _context.Attach(Products).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace W21_Assignment.Pages.Coffee
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CoffeeExists(Coffee.CoffeeId))
+                if (!MenuExists(Products.ProductId))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace W21_Assignment.Pages.Coffee
             return RedirectToPage("./Index");
         }
 
-        private bool CoffeeExists(int id)
+        private bool MenuExists(int id)
         {
-            return _context.Coffee.Any(e => e.CoffeeId == id);
+            return _context.Products.Any(e => e.ProductId == id);
         }
     }
 }

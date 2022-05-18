@@ -84,10 +84,10 @@ namespace W21_Assignment.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Coffee",
+                name: "Plants",
                 columns: table => new
                 {
-                    CoffeeId = table.Column<int>(type: "int", nullable: false)
+                    PlantId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -99,26 +99,27 @@ namespace W21_Assignment.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Coffee", x => x.CoffeeId);
+                    table.PrimaryKey("PK_Plants", x => x.PlantId);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Menu",
+                name: "Products",
                 columns: table => new
                 {
-                    MenuId = table.Column<int>(type: "int", nullable: false)
+                    ProductId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Main = table.Column<string>(type: "longtext", nullable: true)
+                    Name = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Entree = table.Column<string>(type: "longtext", nullable: true)
+                    Description = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Day = table.Column<int>(type: "int", nullable: false),
+                    Picture = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Price = table.Column<decimal>(type: "decimal(7,2)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Menu", x => x.MenuId);
+                    table.PrimaryKey("PK_Products", x => x.ProductId);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -305,10 +306,10 @@ namespace W21_Assignment.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Coffee");
+                name: "Plants");
 
             migrationBuilder.DropTable(
-                name: "Menu");
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

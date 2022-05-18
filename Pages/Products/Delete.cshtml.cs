@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using W21_Assignment.Models;
 
-namespace W21_Assignment.Pages.Coffee
+namespace W21_Assignment.Pages.Products
 {
     public class DeleteModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace W21_Assignment.Pages.Coffee
         }
 
         [BindProperty]
-        public W21_Assignment.Models.Coffee Coffee { get; set; }
+        public W21_Assignment.Models.Product Products { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,9 +29,9 @@ namespace W21_Assignment.Pages.Coffee
                 return NotFound();
             }
 
-            Coffee = await _context.Coffee.FirstOrDefaultAsync(m => m.CoffeeId == id);
+            Products = await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
 
-            if (Coffee == null)
+            if (Products == null)
             {
                 return NotFound();
             }
@@ -45,11 +45,11 @@ namespace W21_Assignment.Pages.Coffee
                 return NotFound();
             }
 
-            Coffee = await _context.Coffee.FindAsync(id);
+            Products = await _context.Products.FindAsync(id);
 
-            if (Coffee != null)
+            if (Products != null)
             {
-                _context.Coffee.Remove(Coffee);
+                _context.Products.Remove(Products);
                 await _context.SaveChangesAsync();
             }
 

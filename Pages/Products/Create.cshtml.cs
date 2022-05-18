@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using W21_Assignment.Models;
 
-namespace W21_Assignment.Pages.Menu
+namespace W21_Assignment.Pages.Products
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace W21_Assignment.Pages.Menu
         }
 
         [BindProperty]
-        public W21_Assignment.Models.Menu Menu { get; set; }
+        public W21_Assignment.Models.Product Products { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -35,7 +35,7 @@ namespace W21_Assignment.Pages.Menu
                 return Page();
             }
 
-            _context.Menu.Add(Menu);
+            _context.Products.Add(Products);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

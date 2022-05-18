@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace W21_Assignment.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20220512162045_init")]
+    [Migration("20220518153228_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -222,9 +222,9 @@ namespace W21_Assignment.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("W21_Assignment.Models.Coffee", b =>
+            modelBuilder.Entity("W21_Assignment.Models.Plant", b =>
                 {
-                    b.Property<int>("CoffeeId")
+                    b.Property<int>("PlantId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -240,32 +240,32 @@ namespace W21_Assignment.Migrations
                     b.Property<decimal?>("Price")
                         .HasColumnType("decimal(7,2)");
 
-                    b.HasKey("CoffeeId");
+                    b.HasKey("PlantId");
 
-                    b.ToTable("Coffee");
+                    b.ToTable("Plants");
                 });
 
-            modelBuilder.Entity("W21_Assignment.Models.Menu", b =>
+            modelBuilder.Entity("W21_Assignment.Models.Product", b =>
                 {
-                    b.Property<int>("MenuId")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("Day")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Entree")
+                    b.Property<string>("Description")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Main")
+                    b.Property<string>("Name")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Picture")
                         .HasColumnType("longtext");
 
                     b.Property<decimal?>("Price")
                         .HasColumnType("decimal(7,2)");
 
-                    b.HasKey("MenuId");
+                    b.HasKey("ProductId");
 
-                    b.ToTable("Menu");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("W21_Assignment.Models.SiteUser", b =>

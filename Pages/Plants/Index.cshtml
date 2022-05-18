@@ -1,49 +1,94 @@
 @page
 @using Microsoft.AspNetCore.Identity
-@model W21_Assignment.Pages.Coffee.IndexModel
+@model W21_Assignment.Pages.Plants.IndexModel
 @inject SignInManager<SiteUser> SignInManager
 @inject UserManager<SiteUser> UserManager
 
 
 @{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ViewData["Title"] = "Index";
 }
 <img src="~/imgs/coffe.jpg" class="homeback" />
-<h1>Our Coffee</h1>
+<h1>Our Plants</h1>
 @if (SignInManager.IsSignedIn(User))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
     <h2>"Welcome, @Model.UserEmail"</h2>
     <p>
-        <a asp-page="Create" class="EditCoffe">Create New</a>
+        <a asp-page="Create" class="EditPlant">Create New</a>
     </p>
     <table class="table">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Coffee[0].Name)
+                    @Html.DisplayNameFor(model => model.Plants[0].Name)
                 </th>
 
                 <th>
-                    @Html.DisplayNameFor(model => model.Coffee[0].Picture)
+                    @Html.DisplayNameFor(model => model.Plants[0].Picture)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Coffee[0].Description)
+                    @Html.DisplayNameFor(model => model.Plants[0].Description)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Coffee[0].Price)
+                    @Html.DisplayNameFor(model => model.Plants[0].Price)
                 </th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model.Coffee)
+            @foreach (var item in Model.Plants)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             {
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
-                        <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="coffeBean" />
+                        <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="plantseed" />
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Description)
@@ -52,45 +97,120 @@
                         @Html.DisplayFor(modelItem => item.Price)
                     </td>
                     <td>
-                        <a asp-page="./Edit" asp-route-id="@item.CoffeeId" class="EditCoffe">Edit</a> |
-                        <a asp-page="./Details" asp-route-id="@item.CoffeeId" class="EditCoffe">Details</a> |
-                        <a asp-page="./Delete" asp-route-id="@item.CoffeeId" class="EditCoffe">Delete</a>
+                        <a asp-page="./Edit" asp-route-id="@item.PlantId" class="EditPlant">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.PlantId" class="EditPlant">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.PlantId" class="EditPlant">Delete</a>
                     </td>
                 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
         </tbody>
     </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 else
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
     <table class="table">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Coffee[0].Name)
+                    @Html.DisplayNameFor(model => model.Plants[0].Name)
                 </th>
 
                 <th>
-                    @Html.DisplayNameFor(model => model.Coffee[0].Picture)
+                    @Html.DisplayNameFor(model => model.Plants[0].Picture)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Coffee[0].Description)
+                    @Html.DisplayNameFor(model => model.Plants[0].Description)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Coffee[0].Price)
+                    @Html.DisplayNameFor(model => model.Plants[0].Price)
                 </th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model.Coffee)
+            @foreach (var item in Model.Plants)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             {
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
-                        <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="coffeBean" />
+                        <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="plantseed" />
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Description)
@@ -99,9 +219,39 @@ else
                         @Html.DisplayFor(modelItem => item.Price)
                     </td>
                 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
         </tbody>
     </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 <style>
@@ -112,14 +262,14 @@ else
         background-color: rgb(165, 160, 154, 0.5) !important;
     }
 
-    .EditCoffe {
+    .EditPlant {
         color: white !important;
         font-family: 'Times New Roman', Times, serif !important;
         font-size: 20px !important;
 
     }
 
-    .coffeBean {
+    .plantseed {
         width: 150px !important;
     }
 </style>

@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using W21_Assignment.Models;
 
-namespace W21_Assignment.Pages.Coffee
+namespace W21_Assignment.Pages.Plants
 {
     public class IndexModel : PageModel
     {
@@ -20,12 +20,12 @@ namespace W21_Assignment.Pages.Coffee
             _context = context;
         }
 
-        public IList<W21_Assignment.Models.Coffee> Coffee { get; set; }
+        public IList<W21_Assignment.Models.Plant> Plants { get; set; }
         public string? UserEmail { get; set; }
         public int? UType { get; set; }
         public async Task OnGetAsync()
         {
-            Coffee = await _context.Coffee.ToListAsync();
+            Plants = await _context.Plants.ToListAsync();
             if (User.Identity != null)
             {
                 var claimsIdentity = (ClaimsIdentity)User.Identity;

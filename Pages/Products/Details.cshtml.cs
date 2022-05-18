@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using W21_Assignment.Models;
 
-namespace W21_Assignment.Pages.Coffee
+namespace W21_Assignment.Pages.Products
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace W21_Assignment.Pages.Coffee
             _context = context;
         }
 
-        public W21_Assignment.Models.Coffee Coffee { get; set; }
+        public W21_Assignment.Models.Product Products { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace W21_Assignment.Pages.Coffee
                 return NotFound();
             }
 
-            Coffee = await _context.Coffee.FirstOrDefaultAsync(m => m.CoffeeId == id);
+            Products = await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
 
-            if (Coffee == null)
+            if (Products == null)
             {
                 return NotFound();
             }
