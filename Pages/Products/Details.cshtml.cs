@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using W21_Assignment.Models;
+using Y23_DirtDwellers.Models;
 
-namespace W21_Assignment.Pages.Products
+namespace Y23_DirtDwellers.Pages.Products
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace W21_Assignment.Pages.Products
             _context = context;
         }
 
-        public W21_Assignment.Models.Product Products { get; set; }
+        public Y23_DirtDwellers.Models.Product Products { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

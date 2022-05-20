@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace W21_Assignment.Areas.Identity.Pages.Account.Manage
+namespace Y23_DirtDwellers.Areas.Identity.Pages.Account.Manage
 {
     public class IndexModel : PageModel
     {
@@ -29,7 +29,7 @@ namespace W21_Assignment.Areas.Identity.Pages.Account.Manage
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
-        public string Username { get; set; }
+        public string Email { get; set; }
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -55,12 +55,18 @@ namespace W21_Assignment.Areas.Identity.Pages.Account.Manage
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+
+            // [Display(Name = "Username")]
+            // public string Username { get; set; }
             [Phone]
             [Display(Name = "Phone Number")]
             public string Phone { get; set; }
             [Required]
-            [Display(Name = "Full Name")]
-            public string Name { get; set; }
+            [Display(Name = "First Name")]
+            public string FirstName { get; set; }
+            [Required]
+            [Display(Name = "Last Name")]
+            public string LastName { get; set; }
             [Display(Name = "Street Number")]
             [Range(0, int.MaxValue, ErrorMessage = "Please enter valid integer Number")]
             public int StreetNumber { get; set; }
@@ -81,15 +87,17 @@ namespace W21_Assignment.Areas.Identity.Pages.Account.Manage
 
         private async Task LoadAsync(SiteUser user)
         {
-            var userName = await _userManager.GetUserNameAsync(user);
+            var userEmail = await _userManager.GetEmailAsync(user);
             // var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
-            Username = userName;
+            Email = userEmail;
 
             Input = new InputModel
             {
+                // Username = user.Username,
                 Phone = user.Phone,
-                Name = user.Name,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
                 StreetNumber = user.StreetNumber,
                 StreetName = user.StreetName,
                 PostalCode = user.PostalCode,
@@ -126,7 +134,9 @@ namespace W21_Assignment.Areas.Identity.Pages.Account.Manage
             }
 
             user.Phone = Input.Phone != user.Phone ? Input.Phone : user.Phone;
-            user.Name = Input.Name != user.Name ? Input.Name : user.Name;
+            // user.Username = Input.Username != user.Username ? Input.Username : user.Username;
+            user.FirstName = Input.FirstName != user.FirstName ? Input.FirstName : user.FirstName;
+            user.LastName = Input.LastName != user.LastName ? Input.LastName : user.LastName;
             user.StreetNumber = Input.StreetNumber != user.StreetNumber ? Input.StreetNumber : user.StreetNumber;
             user.StreetName = Input.StreetName != user.StreetName ? Input.StreetName : user.StreetName;
             user.PostalCode = Input.PostalCode != user.PostalCode ? Input.PostalCode : user.PostalCode;

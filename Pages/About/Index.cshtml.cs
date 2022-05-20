@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using W21_Assignment.Models;
+using Y23_DirtDwellers.Models;
 
-namespace W21_Assignment.Pages.About;
+namespace Y23_DirtDwellers.Pages.About;
 
 public class IndexModel : PageModel
 {

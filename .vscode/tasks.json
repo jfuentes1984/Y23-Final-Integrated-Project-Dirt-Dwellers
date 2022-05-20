@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/W21_Assignment.csproj",
+                "${workspaceFolder}/Y23_DirtDwellers.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/W21_Assignment.csproj",
+                "${workspaceFolder}/Y23_DirtDwellers.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/W21_Assignment.csproj"
+                "${workspaceFolder}/Y23_DirtDwellers.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

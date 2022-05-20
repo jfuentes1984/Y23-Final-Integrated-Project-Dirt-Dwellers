@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using W21_Assignment.Models;
+using Y23_DirtDwellers.Models;
 
-namespace W21_Assignment.Pages.Products
+namespace Y23_DirtDwellers.Pages.Products
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace W21_Assignment.Pages.Products
         }
 
         [BindProperty]
-        public W21_Assignment.Models.Product Products { get; set; }
+        public Y23_DirtDwellers.Models.Product Products { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

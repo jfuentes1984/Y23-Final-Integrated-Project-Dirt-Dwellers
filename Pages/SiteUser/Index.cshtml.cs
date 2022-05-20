@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using W21_Assignment.Models;
+using Y23_DirtDwellers.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace W21_Assignment.Pages_User
+namespace Y23_DirtDwellers.Pages_User
 {
     public class IndexModel : PageModel
     {
@@ -37,7 +37,7 @@ namespace W21_Assignment.Pages_User
             }
 
 
-            _logger.Log(LogLevel.Information, UserInfo.Name);
+            _logger.Log(LogLevel.Information, UserInfo.FirstName);
             return RedirectToPage("../Index");
         }
     }

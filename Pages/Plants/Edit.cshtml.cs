@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using W21_Assignment.Models;
+using Y23_DirtDwellers.Models;
 
-namespace W21_Assignment.Pages.Plants
+namespace Y23_DirtDwellers.Pages.Plants
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace W21_Assignment.Pages.Plants
         }
 
         [BindProperty]
-        public W21_Assignment.Models.Plant Plant { get; set; }
+        public Y23_DirtDwellers.Models.Plant Plant { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

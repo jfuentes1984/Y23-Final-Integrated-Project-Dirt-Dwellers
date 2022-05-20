@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using W21_Assignment.Models;
+using Y23_DirtDwellers.Models;
 
 public class DBContext : IdentityDbContext
 {
@@ -14,9 +14,9 @@ public class DBContext : IdentityDbContext
     {
     }
 
-    public DbSet<W21_Assignment.Models.Product> Products { get; set; }
+    public DbSet<Y23_DirtDwellers.Models.Product> Products { get; set; }
 
-    public DbSet<W21_Assignment.Models.Plant> Plants { get; set; }
+    public DbSet<Y23_DirtDwellers.Models.Plant> Plants { get; set; }
 
-    public DbSet<W21_Assignment.Models.SiteUser> SiteUser { get; set; }
+    public DbSet<Y23_DirtDwellers.Models.SiteUser> SiteUser { get; set; }
 }
