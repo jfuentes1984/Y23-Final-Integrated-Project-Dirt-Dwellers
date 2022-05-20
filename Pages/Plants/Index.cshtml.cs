@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using W21_Assignment.Models;
+using Y23_DirtDwellers.Models;
 
-namespace W21_Assignment.Pages.Plants
+namespace Y23_DirtDwellers.Pages.Plants
 {
     public class IndexModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace W21_Assignment.Pages.Plants
             _context = context;
         }
 
-        public IList<W21_Assignment.Models.Plant> Plants { get; set; }
+        public IList<Y23_DirtDwellers.Models.Plant> Plants { get; set; }
         public string? UserEmail { get; set; }
         public int? UType { get; set; }
         public async Task OnGetAsync()

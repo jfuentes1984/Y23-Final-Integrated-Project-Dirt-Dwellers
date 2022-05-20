@@ -2,13 +2,17 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
-namespace W21_Assignment.Models;
+namespace Y23_DirtDwellers.Models;
 
 public class SiteUser : IdentityUser
 {
     // public int UserId { get; set; }
+    // [PersonalData]
+    // public string? Username { get; set; }
     [PersonalData]
-    public string? Name { get; set; }
+    public string? FirstName { get; set; }
+    [PersonalData]
+    public string? LastName { get; set; }
     [PersonalData]
     public string? Email { get; set; }
     [PersonalData]
@@ -25,6 +29,7 @@ public class SiteUser : IdentityUser
 
     [PersonalData]
     public string? City { get; set; }
+    [PersonalData]
     public string? Province { get; set; }
     [PersonalData]
     public UserType UserType { get; set; }

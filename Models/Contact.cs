@@ -1,4 +1,4 @@
-namespace W21_Assignment.Models;
+namespace Y23_DirtDwellers.Models;
 
 public class Contact
 {

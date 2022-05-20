@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace W21_Assignment.Model;
+namespace Y23_DirtDwellers.Model;
 
 public class Customer
 {

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace W21_Assignment.Models;
+namespace Y23_DirtDwellers.Models;
 
 public class Plant
 {
