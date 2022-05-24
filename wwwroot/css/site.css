@@ -130,6 +130,10 @@ body {
   padding: .5% 0;
 }
 
+.p-last-text a {
+  animation: fade 9s ease-in-out infinite alternate-reverse;
+}
+
 .home-section1 {
   text-align: center;
   box-sizing: border-box;
@@ -167,6 +171,7 @@ body {
   font-family: Raleway;
   color: white;
   background-color: rgba(0, 0, 0, .7);
+  background-image: url("../imgs/umbrellaplant.jpg");
   /* Can only have 1 BG color/image so using blend to combine the 2 */
   background-blend-mode: multiply;
   background-size: cover;
@@ -218,7 +223,7 @@ body {
   font-family: Raleway;
   color: white;
   background-color: rgba(0, 0, 0, .6);
-  background-image: url("https://picsum.photos/500?random=3");
+  background-image: url("../imgs/umbrellaplant.jpg");
   /* Can only have 1 BG color/image so using blend to combine the 2 */
   background-blend-mode: multiply;
   background-size: cover;
@@ -270,7 +275,7 @@ body {
   font-family: Raleway;
   color: white;
   background-color: rgba(0, 0, 0, .6);
-  background-image: url("https://picsum.photos/500?random=7");
+  background-image: url("../imgs/umbrellaplant.jpg");
   /* Can only have 1 BG color/image so using blend to combine the 2 */
   background-blend-mode: multiply;
   background-size: cover;
@@ -570,19 +575,20 @@ h5 {
 }
 
 .home-section2 {
-  width: 100%;
+  width: 101.5%;
   height: 100vh;
   background-color: rgb(71, 185, 71);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 2.8% auto;
 }
 
 .container {
   width: 100%;
-  max-width: 80rem;
+  max-width: 80em;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.5em;
 
 }
 
