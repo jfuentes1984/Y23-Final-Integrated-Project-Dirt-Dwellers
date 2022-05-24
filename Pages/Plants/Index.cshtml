@@ -6,68 +6,62 @@
 
 
 @{
-
-
-
     ViewData["Title"] = "Index";
 }
 <img src="~/imgs/coffe.jpg" class="homeback" />
 <h1>Our Plants</h1>
 @if (SignInManager.IsSignedIn(User))
 
-
-
-
 {
-        <h2>"Welcome, @Model.UserEmail"</h2>
-        <p>
-            <a asp-page="Create" class="EditPlant">Create New</a>
-        </p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
+    @* <h2>"Welcome, @Model.UserEmail"</h2> *@
+    <p>
+        <a asp-page="Create" class="EditPlant">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Name)
-                    </th>
+                </th>
 
-                    <th>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Picture)
-                    </th>
-                    <th>
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Description)
-                    </th>
-                    <th>
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Price)
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
             @foreach (var item in Model.Plants)
 
 
 
 
             {
-                        <tr>
-                            <td>
+                <tr>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td>
-                                <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="plantseed" />
-                            </td>
-                            <td>
+                    </td>
+                    <td>
+                        <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="plantseed" />
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Description)
-                            </td>
-                            <td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Price)
-                            </td>
-                            <td>
-                                <a asp-page="./Edit" asp-route-id="@item.PlantId" class="EditPlant">Edit</a> |
-                                <a asp-page="./Details" asp-route-id="@item.PlantId" class="EditPlant">Details</a> |
-                                <a asp-page="./Delete" asp-route-id="@item.PlantId" class="EditPlant">Delete</a>
-                            </td>
-                        </tr>
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.PlantId" class="EditPlant">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.PlantId" class="EditPlant">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.PlantId" class="EditPlant">Delete</a>
+                    </td>
+                </tr>
 
 
 
@@ -84,8 +78,8 @@
 
 
             }
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 
 
 
@@ -134,26 +128,26 @@ else
 
 
 {
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Name)
-                    </th>
+                </th>
 
-                    <th>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Picture)
-                    </th>
-                    <th>
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Description)
-                    </th>
-                    <th>
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Price)
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
             @foreach (var item in Model.Plants)
 
 
@@ -171,20 +165,20 @@ else
 
 
             {
-                        <tr>
-                            <td>
+                <tr>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td>
-                                <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="plantseed" />
-                            </td>
-                            <td>
+                    </td>
+                    <td>
+                        <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="plantseed" />
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Description)
-                            </td>
-                            <td>
+                    </td>
+                    <td>
                         @Html.DisplayFor(modelItem => item.Price)
-                            </td>
-                        </tr>
+                    </td>
+                </tr>
 
 
 
@@ -201,8 +195,8 @@ else
 
 
             }
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 
 
 
