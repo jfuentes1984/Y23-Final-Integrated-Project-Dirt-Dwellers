@@ -543,6 +543,71 @@ h2 {
   font-size: 20px !important;
 }
 
+/* Plants Page */
+
+.table {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(165, 160, 154, 0.5) !important;
+}
+
+.plantseed {
+  width: 150px !important;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: .5vw solid rgba(136, 231, 136);
+}
+
+.plantseed img {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  transition: 200ms transform ease-in-out;
+}
+
+.plantseed:hover {
+  transform: scale(2);
+  border: 1vw double rgba(136, 231, 136);
+}
+
+.plantseed:hover {
+  animation: bounce 1s;
+}
+
+.EditPlant {
+  color: white !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 20px !important;
+
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+
 @keyframes fade {
 
   0%,

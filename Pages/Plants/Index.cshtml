@@ -8,7 +8,7 @@
 @{
     ViewData["Title"] = "Index";
 }
-<img src="~/imgs/coffe.jpg" class="homeback" />
+<img src="~/imgs/umbrellaplant.jpg" class="homeback" />
 <h1>Our Plants</h1>
 @if (SignInManager.IsSignedIn(User))
 
@@ -31,17 +31,13 @@
                     @Html.DisplayNameFor(model => model.Plants[0].Description)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Plants[0].Price)
+                    @Html.DisplayNameFor(model => model.Plants[0].Instructions)
                 </th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Plants)
-
-
-
-
             {
                 <tr>
                     <td>
@@ -54,7 +50,7 @@
                         @Html.DisplayFor(modelItem => item.Description)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Price)
+                        @Html.DisplayFor(modelItem => item.Instructions)
                     </td>
                     <td>
                         <a asp-page="./Edit" asp-route-id="@item.PlantId" class="EditPlant">Edit</a> |
@@ -62,71 +58,11 @@
                         <a asp-page="./Delete" asp-route-id="@item.PlantId" class="EditPlant">Delete</a>
                     </td>
                 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
         </tbody>
     </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 else
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
     <table class="table">
         <thead>
@@ -142,27 +78,13 @@ else
                     @Html.DisplayNameFor(model => model.Plants[0].Description)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Plants[0].Price)
+                    @Html.DisplayNameFor(model => model.Plants[0].Instructions)
                 </th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Plants)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             {
                 <tr>
@@ -176,60 +98,12 @@ else
                         @Html.DisplayFor(modelItem => item.Description)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Price)
+                        @Html.DisplayFor(modelItem => item.Instructions)
                     </td>
                 </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
         </tbody>
     </table>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-<style>
-    .table {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 20px;
-        color: white;
-        background-color: rgb(165, 160, 154, 0.5) !important;
-    }
-
-    .EditPlant {
-        color: white !important;
-        font-family: 'Times New Roman', Times, serif !important;
-        font-size: 20px !important;
-
-    }
-
-    .plantseed {
-        width: 150px !important;
-    }
-</style>

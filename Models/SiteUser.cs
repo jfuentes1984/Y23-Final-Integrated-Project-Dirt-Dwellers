@@ -33,6 +33,7 @@ public class SiteUser : IdentityUser
     public string? Province { get; set; }
     [PersonalData]
     public UserType UserType { get; set; }
+    public string? Picture { get; set; }
 
 }
 public enum UserType

@@ -2,7 +2,7 @@ global using Y23_DirtDwellers.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
-
+using Y23_DirtDwellers.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +17,7 @@ builder.Services.AddDbContext<DBContext>(options =>
 builder.Services.AddDefaultIdentity<SiteUser>(options =>
 options.SignIn.RequireConfirmedAccount = true)
 .AddEntityFrameworkStores<DBContext>();
-
+builder.Services.AddTransient<IMailService, EMailTrap>();
 
 var app = builder.Build();
 

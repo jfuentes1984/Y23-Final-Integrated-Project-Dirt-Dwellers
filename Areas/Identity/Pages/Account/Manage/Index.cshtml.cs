@@ -80,6 +80,9 @@ namespace Y23_DirtDwellers.Areas.Identity.Pages.Account.Manage
             [Display(Name = "Province")]
             public string Province { get; set; }
 
+            [Display(Name = "Upload Your Picture!")]
+            public string Picture { get; set; }
+
             [Display(Name = "User Type")]
             public UserType UserType { get; set; }
 
@@ -103,6 +106,7 @@ namespace Y23_DirtDwellers.Areas.Identity.Pages.Account.Manage
                 PostalCode = user.PostalCode,
                 City = user.City,
                 Province = user.Province,
+                Picture = user.Picture,
                 UserType = user.UserType
             };
         }
@@ -142,6 +146,7 @@ namespace Y23_DirtDwellers.Areas.Identity.Pages.Account.Manage
             user.PostalCode = Input.PostalCode != user.PostalCode ? Input.PostalCode : user.PostalCode;
             user.City = Input.City != user.City ? Input.City : user.City;
             user.Province = Input.Province != user.Province ? Input.Province : user.Province;
+            user.Picture = Input.Picture != user.Picture ? Input.Picture : user.Picture;
             user.UserType = Input.UserType != user.UserType ? Input.UserType : user.UserType;
             await _userManager.UpdateAsync(user);
 
