@@ -8,7 +8,7 @@
 @{
     ViewData["Title"] = "Index";
 }
-<img src="~/imgs/umbrellaplant.jpg" class="homeback" />
+<img src="~/imgs/plantss.jpg" class="homeback" />
 <h1>Our Plants</h1>
 @if (SignInManager.IsSignedIn(User))
 
@@ -58,9 +58,18 @@
                         <a asp-page="./Delete" asp-route-id="@item.PlantId" class="EditPlant">Delete</a>
                     </td>
                 </tr>
+
+
+
+
+
             }
         </tbody>
     </table>
+
+
+
+
 }
 else
 {
@@ -104,6 +113,15 @@ else
             }
         </tbody>
     </table>
+
+
+
+
+
+
+
+
+
 
 
 }
