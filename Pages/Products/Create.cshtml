@@ -9,35 +9,37 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<img src="~/imgs/moreplants.jpg" class="homeback" />
 
-<h4>Products</h4>
+<h1 class="create">Create</h1>
+
+<h4 class="product1">Products</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group1">
                 <label asp-for="Products.Name" class="control-label"></label>
                 <input asp-for="Products.Name" class="form-control" />
                 <span asp-validation-for="Products.Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group1">
                 <label asp-for="Products.Description" class="control-label"></label>
                 <input asp-for="Products.Description" class="form-control" />
                 <span asp-validation-for="Products.Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group1">
                 <label asp-for="Products.Price" class="control-label"></label>
                 <input asp-for="Products.Price" class="form-control" />
                 <span asp-validation-for="Products.Price" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group1">
                 <label asp-for="Products.Picture" class="control-label"></label>
                 <input asp-for="Products.Picture" class="form-control" />
                 <span asp-validation-for="Products.Picture" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group1">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

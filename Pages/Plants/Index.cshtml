@@ -8,8 +8,8 @@
 @{
     ViewData["Title"] = "Index";
 }
-<img src="~/imgs/plantss.jpg" class="homeback" />
-<h1>Our Plants</h1>
+<img src="~/imgs/umbrellaplant.jpg" class="homeback" />
+<h1>Plants</h1>
 @if (SignInManager.IsSignedIn(User))
 
 {
@@ -38,12 +38,13 @@
                     @Html.DisplayNameFor(model => model.Plants[0].FloweringStage)
                 </th>
                 <th>
-                <th>
-                        @Html.DisplayNameFor(model => model.Plants[0].SuggustedProduct)
+
+                    @Html.DisplayNameFor(model => model.Plants[0].SuggustedProduct)
                 </th>
-                    @* <th>
-                        @Html.DisplayNameFor(model => model.Plants[0].Price)
-                        </th> *@
+                @* <th>
+                    @Html.DisplayNameFor(model => model.Plants[0].Price)
+                    </th> *@
+
                 <th></th>
             </tr>
         </thead>
@@ -61,19 +62,20 @@
                         @Html.DisplayFor(modelItem => item.Description)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Instructions)
+
                         @Html.DisplayFor(modelItem => item.GrowingStage)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.FloweringStage)
                     </td>
                     <td>
-                    <td>
-                            @Html.DisplayFor(modelItem => item.SuggustedProduct)
+
+                        @Html.DisplayFor(modelItem => item.SuggustedProduct)
                     </td>
-                        @* <td>
-                            @Html.DisplayFor(modelItem => item.Price)
-                            </td> *@
+                    @* <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                        </td> *@
+
                     <td>
                         <a asp-page="./Edit" asp-route-id="@item.PlantId" class="EditPlant">Edit</a> |
                         <a asp-page="./Details" asp-route-id="@item.PlantId" class="EditPlant">Details</a> |
@@ -109,7 +111,15 @@ else
                     @Html.DisplayNameFor(model => model.Plants[0].Description)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Plants[0].Instructions)
+
+                    @Html.DisplayNameFor(model => model.Plants[0].GrowingStage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Plants[0].FloweringStage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Plants[0].SuggustedProduct)
+
                 </th>
                 <th></th>
             </tr>
@@ -128,9 +138,17 @@ else
                     <td>
                         @Html.DisplayFor(modelItem => item.Description)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Instructions)
-                    </td>
+
+                    <th>
+                        @Html.DisplayNameFor(modelItem => item.GrowingStage)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(modelItem => item.FloweringStage)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(modelItem => item.SuggustedProduct)
+                    </th>
+
                 </tr>
             }
         </tbody>

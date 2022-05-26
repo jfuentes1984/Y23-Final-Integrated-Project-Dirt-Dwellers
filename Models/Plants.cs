@@ -13,11 +13,5 @@ public class Plant
     public string? GrowingStage { get; set; }
 
     public string? FloweringStage { get; set; }
-
     public string? SuggustedProduct { get; set; }
-
-    // [Range(0, 20000)]
-    // [DataType(DataType.Currency)]
-    // [Column(TypeName = "decimal(7,2)")]
-    // public decimal? Price { get; set; } = 1000;
 }

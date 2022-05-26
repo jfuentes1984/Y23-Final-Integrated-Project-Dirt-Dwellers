@@ -235,9 +235,12 @@ namespace W21_Assignment.Migrations
                     b.Property<string>("GrowingStage")
                         .HasColumnType("longtext");
 
+<<<<<<< HEAD
                     b.Property<string>("Instructions")
                         .HasColumnType("longtext");
 
+=======
+>>>>>>> 2136c97f1f622ad97b38582be611192df6ff37fb
                     b.Property<string>("Name")
                         .HasColumnType("longtext");
 

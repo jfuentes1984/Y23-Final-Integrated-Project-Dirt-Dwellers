@@ -5,6 +5,7 @@
 
     ViewData["Title"] = "Edit";
 }
+<img src="~/imgs/umbrellaplant.jpg" class="homeback" />
 
 <h1>Edit</h1>
 
@@ -31,9 +32,19 @@
                 <span asp-validation-for="Plant.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Plant.Instructions" class="control-label"></label>
-                <input asp-for="Plant.Instructions" class="form-control" />
-                <span asp-validation-for="Plant.Instructions" class="text-danger"></span>
+                <label asp-for="Plant.GrowingStage" class="control-label"></label>
+                <input asp-for="Plant.GrowingStage" class="form-control" />
+                <span asp-validation-for="Plant.GrowingStage" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Plant.FloweringStage" class="control-label"></label>
+                <input asp-for="Plant.FloweringStage" class="form-control" />
+                <span asp-validation-for="Plant.FloweringStage" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Plant.SuggustedProduct" class="control-label"></label>
+                <input asp-for="Plant.SuggustedProduct" class="form-control" />
+                <span asp-validation-for="Plant.SuggustedProduct" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
