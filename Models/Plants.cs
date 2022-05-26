@@ -10,6 +10,9 @@ public class Plant
     public string? Picture { get; set; }
     public string? Description { get; set; }
     public string? Instructions { get; set; }
+    public string? GrowingStage { get; set; }
+
+    public string? FloweringStage { get; set; }
 
     // [Range(0, 20000)]
     // [DataType(DataType.Currency)]
