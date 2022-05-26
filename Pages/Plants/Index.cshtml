@@ -37,9 +37,13 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Plants[0].FloweringStage)
                 </th>
-                @* <th>
-                    @Html.DisplayNameFor(model => model.Plants[0].Price)
-                    </th> *@
+                <th>
+                <th>
+                        @Html.DisplayNameFor(model => model.Plants[0].sugguestedProduct)
+                </th>
+                    @* <th>
+                        @Html.DisplayNameFor(model => model.Plants[0].Price)
+                        </th> *@
                 <th></th>
             </tr>
         </thead>
@@ -63,9 +67,13 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.FloweringStage)
                     </td>
-                    @* <td>
-                        @Html.DisplayFor(modelItem => item.Price)
-                        </td> *@
+                    <td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.sugguestedProduct)
+                    </td>
+                        @* <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                            </td> *@
                     <td>
                         <a asp-page="./Edit" asp-route-id="@item.PlantId" class="EditPlant">Edit</a> |
                         <a asp-page="./Details" asp-route-id="@item.PlantId" class="EditPlant">Details</a> |

@@ -14,8 +14,10 @@ public class Plant
 
     public string? FloweringStage { get; set; }
 
-    // [Range(0, 20000)]
-    // [DataType(DataType.Currency)]
-    // [Column(TypeName = "decimal(7,2)")]
-    // public decimal? Price { get; set; } = 1000;
+    public Product sugguestedProduct { get; set; }
+
+    [Range(0, 20000)]
+    [DataType(DataType.Currency)]
+    [Column(TypeName = "decimal(7,2)")]
+    public decimal? Price { get; set; } = 1000;
 }
