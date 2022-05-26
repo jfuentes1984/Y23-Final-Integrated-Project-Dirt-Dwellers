@@ -31,9 +31,19 @@
                 <span asp-validation-for="Plant.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Plant.Price" class="control-label"></label>
-                <input asp-for="Plant.Price" class="form-control" />
-                <span asp-validation-for="Plant.Price" class="text-danger"></span>
+                <label asp-for="Plant.GrowingStage" class="control-label"></label>
+                <input asp-for="Plant.GrowingStage" class="form-control" />
+                <span asp-validation-for="Plant.GrowingStage" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Plant.FloweringStage" class="control-label"></label>
+                <input asp-for="Plant.FloweringStage" class="form-control" />
+                <span asp-validation-for="Plant.FloweringStage" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Plant.SuggustedProduct" class="control-label"></label>
+                <input asp-for="Plant.SuggustedProduct" class="form-control" />
+                <span asp-validation-for="Plant.SuggustedProduct" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

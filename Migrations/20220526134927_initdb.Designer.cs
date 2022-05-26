@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace W21_Assignment.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20220525173031_initdb")]
+    [Migration("20220526134927_initdb")]
     partial class initdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -231,14 +231,20 @@ namespace W21_Assignment.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("FloweringStage")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("GrowingStage")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Name")
                         .HasColumnType("longtext");
 
                     b.Property<string>("Picture")
                         .HasColumnType("longtext");
 
-                    b.Property<decimal?>("Price")
-                        .HasColumnType("decimal(7,2)");
+                    b.Property<string>("SuggustedProduct")
+                        .HasColumnType("longtext");
 
                     b.HasKey("PlantId");
 
