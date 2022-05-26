@@ -14,6 +14,8 @@ public class Plant
 
     public string? FloweringStage{get;set;}
 
+    public Product sugguestedProduct {get;set;}
+
     [Range(0, 20000)]
     [DataType(DataType.Currency)]
     [Column(TypeName = "decimal(7,2)")]

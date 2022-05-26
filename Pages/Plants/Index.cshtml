@@ -37,6 +37,9 @@
                     @Html.DisplayNameFor(model => model.Plants[0].FloweringStage)
                 </th>
                 <th>
+                    @Html.DisplayNameFor(model => model.Plants[0].sugguestedProduct)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Plants[0].Price)
                 </th>
                 <th></th>
@@ -64,6 +67,9 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.FloweringStage)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sugguestedProduct)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Price)
