@@ -98,7 +98,8 @@ button.accept-policy {
 }
 
 footer {
-  position: relative;
+  position: absolute;
+  background-color: rgba(136, 231, 136, 0.7);
   text-align: left;
   margin-top: 0;
   bottom: 0;

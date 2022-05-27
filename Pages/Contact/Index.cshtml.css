@@ -39,8 +39,8 @@
 
 
 .container {
-    width: 80%;
-    margin: 50px auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .contact-box {
@@ -50,7 +50,7 @@
 
 .contact-left {
     flex-basis: 60%;
-    padding: 40px 60px;
+    padding: 0 60px;
 }
 
 .contact-right {
@@ -144,7 +144,7 @@ p {
 
 
 .rev-section {
-    margin: auto;
+    margin: 5% auto;
     padding: 0 1rem;
     max-width: 1100px;
     text-align: center;

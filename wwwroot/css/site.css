@@ -18,7 +18,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-
+  /* text-align: center; */
+  background-image: url("../imgs/8.jpg");
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .text-center {
@@ -39,9 +44,8 @@ body {
   top: 0px;
   right: 0px;
   width: 100vw;
-  height: 190vh;
+  height: 100vh;
   z-index: -1;
-
 }
 
 .netborderbox-container {
@@ -333,7 +337,6 @@ body {
   font-size: large;
   /* setting opacity to 60% to blend with bg img */
   background-color: rgba(0, 0, 0, .6);
-  background-image: url("/dist/img/Free_willy.jpg");
   /* Can only have 1 BG color/image so using blend to combine the 2 */
   background-blend-mode: multiply;
   background-size: cover;
@@ -355,11 +358,10 @@ body {
 
 h1 {
   color: rgb(252, 252, 252);
-  font-family: 'Times New Roman', Times, serif;
   text-align: center;
   font-size: 50px;
   font-weight: 500;
-  /* padding-top: 120px; */
+  margin: 0 0;
 }
 
 
@@ -370,7 +372,6 @@ h3 {
   text-align: center;
   font-size: 40px;
   font-weight: 500;
-  /* padding-top: 120px; */
 }
 
 /* @keyframes animate {
@@ -421,9 +422,9 @@ h3 {
 
 .wrapper2 {
   width: 400px;
-  height: 450px;
+  height: 470px;
   color: #000;
-  top: 65%;
+  top: 52%;
   left: 50%;
   padding: 60px 30px;
   position: absolute;
@@ -494,86 +495,6 @@ h3 {
 
 }
 
-/* About Us Page */
-
-#about {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 30px 210px;
-  margin-bottom: 100px;
-
-}
-
-#pic {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.heading1 {
-  color: white;
-  font-family: century;
-  font-size: 3rem;
-  text-align: center;
-  padding: 0px;
-}
-
-#pic img {
-  width: 575px;
-  height: 400px;
-}
-
-#intro {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  padding: 45px;
-  background-color: rgb(76, 68, 59, 0.5);
-}
-
-.text {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  color: white;
-}
-
-h2 {
-  font-family: century;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.detail {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  margin: 20px;
-  align-items: center;
-  text-align: justify;
-  padding: 20px;
-  border: rgb(92, 206, 92) 1px solid;
-  border-radius: 15px;
-  background: linear-gradient(to top, rgb(76, 68, 59, 0.5) 50%, rgb(171, 226, 120) 50%);
-  background-size: 100% 200%;
-  transition: all 0.8s;
-}
-
-.box:hover {
-  background-position: bottom;
-  color: white;
-  border: none;
-  box-shadow: 0 0 20px rgba(172, 151, 135, 1);
-}
 
 /* Products Page */
 
@@ -764,18 +685,199 @@ h5 {
 
 }
 
+/* About Us Page */
+
+/* Styling the area of the slides */
+.slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+
+.slide h1 {
+  color: burlywood;
+  text-shadow: 4px 4px 2px brown;
+}
+
+.about-text {
+  font-size: 2.5em;
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 4px 4px 2px brown;
+}
+
+/* Add animation to the slides */
+.slide-wrapper {
+
+  /* Calculate the total width on the
+  basis of number of slides */
+  width: calc(728px * 4);
+
+  /* Specify the animation with the
+  duration and speed */
+  animation: slide 40s ease infinite;
+}
+
+/* Set the background color
+of each of the slides */
+.slide:nth-child(1) {
+  background-color: rgba(0, 0, 0, .5);
+  background-image: url("../imgs/aboutbackground.jpg");
+  /* Can only have 1 BG color/image so using blend to combine the 2 */
+  background-blend-mode: multiply;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.slide:nth-child(2) {
+  background-color: rgba(0, 0, 0, .5);
+  background-image: url("../imgs/aboutbg.jpg");
+  /* Can only have 1 BG color/image so using blend to combine the 2 */
+  background-blend-mode: multiply;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.slide:nth-child(3) {
+  background-color: rgba(0, 0, 0, .5);
+  background-image: url("../imgs/aboutbg2.jpg");
+  /* Can only have 1 BG color/image so using blend to combine the 2 */
+  background-blend-mode: multiply;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.slide:nth-child(4) {
+  background-color: rgba(0, 0, 0, .5);
+  background-image: url("../imgs/aboutbg3.jpg");
+  /* Can only have 1 BG color/image so using blend to combine the 2 */
+  background-blend-mode: multiply;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Define the animation
+for the slideshow */
+@keyframes slide {
+
+  /* Calculate the margin-left for
+  each of the slides */
+  10% {
+    margin-left: 0px;
+  }
+
+  35% {
+    margin-left: calc(-728px * 1);
+  }
+
+  65% {
+    margin-left: calc(-728px * 2);
+  }
+
+  90% {
+    margin-left: calc(-728px * 3);
+  }
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+}
+
+#pic {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading1 {
+  color: white;
+  font-family: century;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#pic img {
+  width: 575px;
+  height: 400px;
+}
+
+#intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(76, 68, 59, 0.5);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  color: white;
+}
+
+h2 {
+  font-family: century;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 20px;
+  align-items: center;
+  text-align: justify;
+  padding: 20px;
+  border: rgb(92, 206, 92) 1px solid;
+  border-radius: 15px;
+  background: linear-gradient(to top, rgb(76, 68, 59, 0.5) 50%, rgb(171, 226, 120) 50%);
+  background-size: 100% 200%;
+  transition: all 0.8s;
+}
+
+.box:hover {
+  background-position: bottom;
+  color: white;
+  border: none;
+  box-shadow: 0 0 20px rgba(172, 151, 135, 1);
+}
+
 .container_1 {
+  display: flex;
   position: relative;
-  width: 1200px;
-  height: 300px;
-  margin: 240px auto;
-
-
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: 45vh;
+  margin: 0 auto;
 }
 
 .container_1 .box1 {
   position: relative;
-  width: calc(400px - 30px);
+  width: calc(350px - 30px);
   height: calc(300px - 30px);
   background: burlywood;
   float: left;
@@ -881,8 +983,8 @@ h5 {
 }
 
 .services .container .box {
-  width: 31rem;
-  height: 31rem;
+  width: 25rem;
+  height: 25rem;
   margin: .5rem;
   position: relative;
   overflow: hidden;
