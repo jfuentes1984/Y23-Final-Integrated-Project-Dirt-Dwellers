@@ -63,7 +63,8 @@ ul {
 
 .container {
   padding: 16px;
-  margin-top: 90px;
+  margin-top: 82px;
+  /* background-color: rgba(136, 231, 136, 0.3); */
 }
 
 
@@ -97,13 +98,31 @@ button.accept-policy {
   line-height: inherit;
 }
 
+/* Footer section */
+
 footer {
-  position: absolute;
-  background-color: rgba(136, 231, 136, 0.7);
-  text-align: left;
+  position: relative;
+  background-color: white;
+  text-align: center;
   margin-top: 0;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px;
+}
+
+.footer {
+  font-size: x-large;
+  color: grey;
+}
+
+.footer-social {
+  font-size: x-large;
+  font-weight: bolder;
+  color: grey;
+}
+
+.footer-anochors {
+  font-size: x-large;
+  color: rgba(136, 231, 136);
+  text-decoration: none !important;
 }

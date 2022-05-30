@@ -18,6 +18,9 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+.mainbody {
   /* text-align: center; */
   background-image: url("../imgs/8.jpg");
   /* background-position: center; */
@@ -424,7 +427,7 @@ h3 {
   width: 400px;
   height: 470px;
   color: #000;
-  top: 52%;
+  top: 40%;
   left: 50%;
   padding: 60px 30px;
   position: absolute;
@@ -1085,4 +1088,58 @@ h4 {
 
 .create {
   color: rgb(255, 255, 255)
+}
+
+/* profile page */
+
+.profile-row-container {
+  background-color: wheat;
+}
+
+/* Profile Page */
+
+.row-container {
+  margin: 24.5% 0;
+  /* background-color: rgba(0, 0, 0, .7); */
+}
+
+/* Privacy Page */
+
+.privacy-container {
+  background-color: wheat;
+}
+
+.p-privacy {
+  text-align: center;
+  margin: 5% 15%;
+}
+
+
+/* Footer section */
+
+.footer-page-image {
+  /* make text flow around image using float  */
+  float: right;
+  height: 70px;
+  width: 70px;
+  margin: .1% 0;
+  border: .7vw solid rgba(136, 231, 136, 0.7);
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  /* border-radius: 50%; */
+}
+
+.footer-page-image:hover {
+  transform: scale(2);
+  border: 1vw double rgba(136, 231, 136);
+}
+
+.footer-page-image:hover {
+  animation: bounce 1s;
+}
+
+.footer-anochors a {
+  text-decoration: none !important;
+  color: rgba(136, 231, 136);
 }
