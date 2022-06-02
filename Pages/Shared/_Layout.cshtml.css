@@ -33,9 +33,11 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .navbar {
+  /* display: flex; */
   overflow: hidden;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1%;
   padding: 0 !important;
   background-color: rgba(136, 231, 136, 0.7);
   position: fixed !important;
@@ -71,13 +73,12 @@ a {
   color: white !important;
 }
 
-
-
 ul {
   display: flex;
   flex-direction: row;
   position: sticky;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
   margin: 0 !important;
@@ -94,7 +95,7 @@ ul {
 
 .container {
   padding: 16px;
-  margin-top: 82px;
+  margin-top: 12%;
   /* background-color: rgba(136, 231, 136, 0.3); */
 }
 
