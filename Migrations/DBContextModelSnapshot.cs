@@ -235,6 +235,9 @@ namespace W21_Assignment.Migrations
                     b.Property<string>("GrowingStage")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Instructions")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Name")
                         .HasColumnType("longtext");
 
@@ -286,6 +289,9 @@ namespace W21_Assignment.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Phone")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Picture")
                         .HasColumnType("longtext");
 
                     b.Property<string>("PostalCode")

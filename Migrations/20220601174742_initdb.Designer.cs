@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace W21_Assignment.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20220526134927_initdb")]
+    [Migration("20220601174742_initdb")]
     partial class initdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -237,6 +237,9 @@ namespace W21_Assignment.Migrations
                     b.Property<string>("GrowingStage")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Instructions")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Name")
                         .HasColumnType("longtext");
 
@@ -288,6 +291,9 @@ namespace W21_Assignment.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Phone")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Picture")
                         .HasColumnType("longtext");
 
                     b.Property<string>("PostalCode")
