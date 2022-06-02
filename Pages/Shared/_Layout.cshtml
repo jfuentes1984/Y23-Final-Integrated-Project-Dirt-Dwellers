@@ -16,7 +16,11 @@
         <nav class="navbar">
 
             <div class="menu">
-                @* <a class="navbar-brand" asp-area="" asp-page="/Index">.NET Coffe</a> *@
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <h1 class="nav-index-display">Dirt Dwellers <div class="nav-logo-text"> Where Nature
+                            and Technology <br> Live in Harmony </div>
+                    </h1>
+                </a>
                 @* <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +42,17 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Contact/Index">Contact</a>
                     </li>
+                    <div class="menu">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Blog/Index">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Explore/Index">Explore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Gallery/Index">Gallery</a>
+                        </li>
+                    </div>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -50,9 +65,46 @@
         </main>
     </div>
 
-    <footer>
+    <footer class="footer-container"><br>
+        <div class="footer-social">LET'S GET SOCIAL</div>
+        <ul class="footer-nav">
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="footer-page-image" src="~/imgs/fbicon.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img class="footer-page-image" src="~/imgs/twittericon.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="footer-page-image" src="~/imgs/instagramicon.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.pinterest.com" target="_blank">
+                    <img class="footer-page-image" src="~/imgs/pinteresticon.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img class="footer-page-image" src="~/imgs/youtubeicon.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.github.com" target="_blank">
+                    <img class="footer-page-image" src="~/imgs/githubicon.jpg">
+                </a>
+            </li>
+        </ul>
+
+        <div class="footer-anochors"> <a asp-area="" asp-page="/Privacy"><br> Privacy
+                Policy</a> | <a asp-area="" asp-page="/Terms">Terms of Use</a> | <a asp-area=""
+                asp-page="~/Pages/Contact">Contact Us</a></div><br>
         <div class="footer">
-            &copy; 2022 - Dirt Dwellers - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022 - Dirt Dwellers Inc., 123 Muddy St. J92 4N3, Québec
         </div>
     </footer>
 

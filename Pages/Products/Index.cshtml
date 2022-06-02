@@ -8,9 +8,10 @@
 @{
     ViewData["Title"] = "Index";
 }
-<img src="~/imgs/plantss.jpg" class="homeback" />
+<img src="~/imgs/moreplants.jpg" class="homeback" />
+
 <div class="menuback">
-    <h1 contenteditable="true">Our Products</h1>
+    <h1>Products</h1>
     @if (SignInManager.IsSignedIn(User))
     {
 
@@ -50,7 +51,7 @@
                             @Html.DisplayFor(modelItem => item.Price)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Picture)
+                            <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="plantseed" />
                         </td>
                         <td>
                             <a asp-page="./Edit" asp-route-id="@item.ProductId" class="Edit">Edit</a> |
@@ -96,7 +97,7 @@
                             @Html.DisplayFor(modelItem => item.Price)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Picture)
+                            <img src="~/imgs/@Html.DisplayFor(modelItem => item.Picture)" class="plantseed" />
                         </td>
                     </tr>
                 }

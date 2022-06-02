@@ -13,5 +13,5 @@ public class Plant
     public string? GrowingStage { get; set; }
 
     public string? FloweringStage { get; set; }
-    public string? SuggustedProduct {get;set;}
+    public string? SuggustedProduct { get; set; }
 }
