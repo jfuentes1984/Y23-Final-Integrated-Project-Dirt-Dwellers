@@ -69,6 +69,14 @@ for details on configuring this project to bundle and minify static web assets. 
   padding: 0 20px;
 }
 
+.nav-item:hover {
+  border: .6vw double rgba(136, 231, 136);
+  border-top-left-radius: 45%;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  transition: ease-in-out;
+}
+
 a {
   color: white !important;
 }
