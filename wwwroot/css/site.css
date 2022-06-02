@@ -63,6 +63,7 @@ body {
   background-color: rgba(0, 0, 0, .4);
   width: 95vw;
   height: 48vh;
+  margin-top: 1%;
   padding: 1% 1%;
 }
 
@@ -84,6 +85,11 @@ body {
 
 .h1-index-display:hover {
   color: rgba(136, 231, 136);
+}
+
+.sub-header:hover {
+  color: rgba(136, 231, 136);
+  font-size: x-large;
 }
 
 .logo-text {
